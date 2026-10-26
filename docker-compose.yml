@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: doc-intelligence-app
+    container_name: doc-intelligence-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
